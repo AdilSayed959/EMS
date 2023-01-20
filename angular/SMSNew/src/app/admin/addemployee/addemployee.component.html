@@ -1,0 +1,202 @@
+<style>
+    .main-div {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .mat-form-field {
+        padding: 10px;
+    }
+    
+    table {
+        width: 100%;
+    }
+    
+    .two-column-div {
+        column-count: 2;
+    }
+</style>
+
+<br>
+<br>
+<div>
+    <form [formGroup]="formService.addEmpform" class="normal-form">
+        <mat-card layout="row" layout-align="center center">
+            <mat-card-content>
+                <div>
+                    <input type="hidden" formControlName="$key">
+
+                    <div class="two-column-div">
+
+                        <div>
+
+
+                            <div class="add-bottom-padding">
+                                <mat-form-field [style.width.px]=300>
+                                    <input formControlName="firstName" matInput placeholder="First Name">
+                                    <mat-error>This field required.</mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="add-bottom-padding">
+                                <mat-form-field [style.width.px]=300>
+                                    <input formControlName="fatherName" matInput placeholder="Father Name">
+                                    <mat-error>This field required.</mat-error>
+                                </mat-form-field>
+                            </div>
+
+
+                            <div class="add-bottom-padding">
+
+                                <mat-radio-group formControlName="gender">&nbsp;&nbsp;Gender<br>
+                                    <mat-radio-button value="male">Male</mat-radio-button>
+                                    <mat-radio-button value="female">Female</mat-radio-button>
+                                    <mat-radio-button value="other">Other</mat-radio-button>
+                                </mat-radio-group>
+                            </div>
+
+                            <div class="add-bottom-padding">
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Choose birth date</mat-label>
+                                    <input matInput [matDatepicker]="picker1" formControlName="dob">
+                                    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                                    <mat-datepicker #picker1></mat-datepicker>
+                                </mat-form-field>
+
+                            </div>
+
+                            <div class="add-bottom-padding">
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Choose date of joining</mat-label>
+                                    <input matInput [matDatepicker]="picker2" formControlName="doj">
+                                    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                                    <mat-datepicker #picker2></mat-datepicker>
+                                </mat-form-field>
+                            </div>
+                            <div class="add-bottom-padding">
+                                <mat-form-field [style.width.px]=300>
+                                    <mat-select formControlName="dno" placeholder="Department">
+                                        <mat-option>None</mat-option>
+                                        <ng-container *ngFor="let department of depts">
+                                            <mat-option value="{{department.dno}}">{{department.dname}}</mat-option>
+                                        </ng-container>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+
+                            <div class="add-bottom-padding">
+                                <mat-form-field [style.width.px]=300>
+                                    <input formControlName="password" matInput placeholder="password">
+                                    <mat-error>This field required.</mat-error>
+                                </mat-form-field>
+                            </div>
+
+
+
+                            <div class="add-bottom-padding">
+                                <mat-form-field [style.width.px]=300>
+                                    <mat-select formControlName="desgId" placeholder="Designation">
+                                        <mat-option>None</mat-option>
+                                        <ng-container *ngFor="let desg of desigs">
+                                            <mat-option value="{{desg.desg_id}}">{{desg.desg_type}}</mat-option>
+                                        </ng-container>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+
+
+                            <div class="add-bottom-padding" [style.width.px]=300>
+                                <mat-form-field>
+                                    <input formControlName="email" matInput placeholder="Email">
+                                    <mat-error>Invalid email address.</mat-error>
+                                </mat-form-field>
+                            </div>
+
+
+                        </div>
+
+
+
+
+                        <div>
+
+                            <div class="add-bottom-padding">
+                                <mat-form-field [style.width.px]=300>
+                                    <textarea formControlName="caddr" matInput placeholder="Communication Address"></textarea>
+                                    <mat-error>This field required.</mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="add-bottom-padding">
+                                <mat-checkbox formControlName="isSame" (change)=onChange($event)>same as above</mat-checkbox>
+                            </div>
+                            <div class="add-bottom-padding">
+                                <mat-form-field [style.width.px]=300>
+                                    <textarea formControlName="paddr" matInput placeholder="Permanent Address"></textarea>
+                                    <mat-error>This field required.</mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="add-bottom-padding">
+                                <mat-form-field [style.width.px]=300>
+                                    <input formControlName="contact" matInput placeholder="Contact*">
+                                    <mat-error *ngIf="formService.addEmpform.controls['contact'].errors?.required">This is field is required.</mat-error>
+                                    <mat-error *ngIf="formService.addEmpform.controls['contact'].errors?.pattern">invalid contact number.</mat-error>
+                                </mat-form-field>
+                            </div>
+
+                            <div class="add-bottom-padding">
+                                <mat-form-field [style.width.px]=300>
+                                    <input formControlName="salary" matInput placeholder="Salary">
+                                    <mat-error *ngIf="formService.addEmpform.controls['salary'].errors?.required">This is field is required.</mat-error>
+                                    <mat-error *ngIf="formService.addEmpform.controls['salary'].errors?.pattern">invalid salary.</mat-error>
+                                </mat-form-field>
+                            </div>
+
+                            <div class="add-bottom-padding">
+
+                                <mat-radio-group formControlName="isHandicaped">&nbsp;&nbsp;Handicaped<br>
+                                    <mat-radio-button value="no">No</mat-radio-button>
+                                    <mat-radio-button value="yes">Yes</mat-radio-button>
+
+                                </mat-radio-group>
+                            </div>
+
+
+
+
+
+
+                        </div>
+
+
+
+                    </div>
+
+
+                    <mat-grid-list cols="3" rowHeight="100px">
+                        <mat-grid-tile></mat-grid-tile>
+                        <mat-grid-tile>
+                            <div class="button-row">
+                                <button mat-raised-button color="primary" (click)="addEmp()" [disabled]="formService.addEmpform.invalid">Submit</button>
+                                <button mat-raised-button color="warn" (click)="onClear()">Clear</button>
+                            </div>
+                        </mat-grid-tile>
+                        <mat-grid-tile></mat-grid-tile>
+                    </mat-grid-list>
+
+
+
+
+
+                </div>
+
+            </mat-card-content>
+        </mat-card>
+
+
+
+
+
+
+    </form>
+</div>

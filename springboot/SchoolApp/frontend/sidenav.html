@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        body{
+            background-color: white;
+        }
+
+        .container{
+            display: flex;
+            position: relative;
+
+        }
+
+        .container .navbar{
+            position: fixed;
+            width: 200px;
+            height: 100%;
+            background-color: hsl(240, 100%, 50%);
+            margin-left: 10px;
+            padding:25px 0;
+            
+        }
+        .container .navbar h2{
+            color: white;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 30px ; 
+            
+        }
+        
+
+        .container .navbar ul li{
+            
+            padding: 15px;
+            border-bottom: 1px solid white;
+            border-top: 1px solid white;
+        }
+
+        .container .navbar ul li:hover{
+          background-color: rgb(104, 104, 223);
+        }
+        .container .navbar ul li a{
+        color: white;
+        display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="navbar">
+        <h2>Dashboard</h2>
+        <ul>
+      <li> <a href="#">Emp.Attendance Master</a>
+      <li> <a href="#">Emp.Advance Master</a>
+      <li> <a href="#">Emp.Leave Master</a>
+      <li> <a href="#">Emp.Increment Master</a>
+      <li> <a href="#">Emp.Substitution Master</a>
+      <li> <a href="#">Emp.Recoard Master</a>
+      <li> <a href="#">Designation Master</a>
+      <li> <a href="#">Working Status Master</a>
+      <li> <a href="#">Change Password</a>
+      <li> <a href="#">Report</a></li>
+      </ul>
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emloyee Management System</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        .main-form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 700px;
+        }
+        .header{
+            background: rgb(30, 30, 136);
+            width: 100%;
+            color: white;
+            height: 2.1rem;
+        }
+        .header h1{
+            letter-spacing: 1.5px;
+            padding: 5px 10px;
+        }
+        .para-p{
+            padding: 5px;
+            margin-left: -585px;
+            font-size: 13px;
+        }
+        .fill-form{
+            border: rgb(30, 30, 136) 3px solid;
+            width: 100%;
+        }
+        .para{
+            width: 100%;
+            height: 1.3rem;
+            background: rgb(30, 30, 136);
+            color: white;
+            text-align: center;
+        }
+        .para p{
+            opacity: 96%;
+        }
+        .form{
+            margin-left: 6rem;
+            padding: 30px;
+            font-size: 14px;
+        }
+        #Category{
+            margin-left: 65px;
+        }
+        .lable{
+            padding: 2px;
+        }
+        thead{
+            background: rgb(30, 30, 136);
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .employee{
+            font-size: 14px;
+        }
+        .empty-ip{
+            width: 80px;
+            height: 18px;
+            margin: 5px 0 5px 1.8rem;
+        }
+        .sub-btn{
+            display: flex;
+            justify-content: center;
+        }
+        tbody{
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <section class="form">
+        <div class="main-form">
+            <div class="header">
+                <h1>Employee Management System</h1>
+            </div>
+            <div class="para-p">
+                <p>Welcome KPR</p>
+            </div>
+            <div class="fill-form">
+                <div class="para">
+                    <p>Attendence Register</p>
+                </div>
+                <div class="form">
+                    <label>Date Of Attendence</label>
+                    <input type="date" placeholder="Enter date" id="A-date"><br><br>
+                    <label for="Category">Category</label>
+                    <select class="lable" name="Category" id="Category">
+                        <option>Proggramer</option>
+                        <option>Developer</option>
+                        <option>Coder</option>
+                        <option>Tester</option>
+                    </select>
+                </div>
+                <div class="employee">
+                    <table style="width: 100%; padding: 5px;" cellpadding="8" cellspacing="0"  >
+                        <div class="t-head">
+                            <thead>
+                                <tr>
+                                    <th> Emp Id </th>
+                                    <th> Emp Name </th>
+                                    <th> Present Status </th>
+                                    <th> InTime </th>
+                                    <th> OutTime </th>
+                                </tr>
+                            </thead>
+                        </div>    
+                            <tbody cellspacing="15">
+                                <tr bgcolor="#ddd">
+                                    <td> EMP0000018 </td>
+                                    <td> Amar Singh </td>
+                                    <td>
+                                        <input type="radio">Present</input>
+                                        <input type="radio">Absent</input>
+                                        <input type="radio">Off</input>
+                                    </td>
+                                    <td><input class="empty-ip" type=""></td> 
+                                    <td><input class="empty-ip" type=""></td> 
+                                </tr>
+                                <tr bgcolor="#eee">
+                                    <td> EMP0000001 </td>
+                                    <td> Anil </td>
+                                    <td>
+                                        <input type="radio">Present</input>
+                                        <input type="radio">Absent</input>
+                                        <input type="radio">Off</input>
+                                    </td>
+                                    <td><input class="empty-ip" type=""></td> 
+                                    <td><input class="empty-ip" type=""></td> 
+                                </tr>
+                                <tr bgcolor="#ddd">
+                                    <td> EMP0000022 </td>
+                                    <td> Guddu </td>
+                                    <td>
+                                        <input type="radio">Present</input>
+                                        <input type="radio">Absent</input>
+                                        <input type="radio">Off</input>
+                                    </td>
+                                    <td><input class="empty-ip" type=""></td> 
+                                    <td><input class="empty-ip" type=""></td>  
+                                </tr>
+                                <tr bgcolor="#eee">
+                                    <td> EMP0000019 </td>
+                                    <td> Jainarayan </td>
+                                    <td>
+                                        <input type="radio">Present</input>
+                                        <input type="radio">Absent</input>
+                                        <input type="radio">Off</input>
+                                    </td>
+                                    <td><input class="empty-ip" type=""></td> 
+                                    <td><input class="empty-ip" type=""></td>  
+                                </tr>
+                                <tr bgcolor="#ddd" >
+                                    <td> EMP0000009 </td>
+                                    <td> Kishan </td>
+                                    <td>
+                                        <input type="radio">Present</input>
+                                        <input type="radio">Absent</input>
+                                        <input type="radio">Off</input>
+                                    </td>
+                                    <td><input class="empty-ip" type=""></td> 
+                                    <td><input class="empty-ip" type=""></td> 
+                                </tr>
+                                <tr bgcolor="#eee">
+                                    <td> EMP0000020 </td>
+                                    <td> Lal Bahadur </td>
+                                    <td>
+                                        <input type="radio">Present</input>
+                                        <input type="radio">Absent</input>
+                                        <input type="radio">Off</input>
+                                    </td>
+                                    <td><input class="empty-ip" type=""></td> 
+                                    <td><input class="empty-ip" type=""></td>  
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="sub-btn">
+                            <button>Submit</button>
+                        </div>
+                </div>
+            </div>    
+        </div>
+    </section>
+</body>
+</html>

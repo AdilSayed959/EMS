@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>empolyee leave master</title>
+
+    <style>
+        .heading {
+            background-color: darkblue;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+
+            border: 2px solid darkblue;
+            height: 400px;
+            width: 500px;
+            position: absolute;
+            transform: translate(75%, 10%);
+
+        }
+
+        .container table {
+            height: 360px;
+            width: 500px;
+            border: 1px;
+        }
+
+        .container .tbl2 caption {
+            margin: 0;
+            height: 25px;
+            border: 1px solid darkblue;
+            background-color: darkblue;
+            color: white;
+        }
+
+        .tbl2 input[type="button"] {
+            width: 80px;
+            border: 1px solid green;
+            height: 30px;
+            border-radius: 3px;
+            justify-content: space-evenly;
+            margin: 20px;
+        }
+
+
+
+        .tbl2 input[type="date"] {
+            width: 160px;
+        }
+
+        .tbl2 select {
+            width: 140px;
+        }
+
+        .tbl2 select {
+            border: 1px solid rgb(41, 224, 41);
+        }
+
+        .tbl2 input[type=Date] {
+            border: 1px solid rgb(41, 224, 41);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="heading">
+        <h1>Employee Management System</h1>
+    </div>
+    <div class="container">
+        <form action="">
+            <table class="tbl2" border="0" align="">
+                <caption>
+                    Employee Leave Master
+                </caption>
+                <tr>
+                    <td>Category</td>
+                    <td>
+                        <select name="" id="">
+                            <option value="daily wages">Daily Wages</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Designation</td>
+                    <td>
+                        <select name="" id="">
+                            <option value="carbin">Carbin</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Empolyee Name</td>
+                    <td>
+                        <select name="" id="">
+                            <option value=" select empolyee ">Select Empolyee </option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Leave Type</td>
+                    <td>
+                        <select name="" id="">
+                            <option value="pay leave">Pay Leave </option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>From Date</td>
+                    <td><input type="date" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>To Date</td>
+                    <td><input type="date" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Description</td>
+                    <td><textarea name="" id="" cols="25" rows="5"
+                            style=" border: 1px solid rgb(41, 224, 41);"></textarea></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="2"><input type="button" value="Submit">
+                        <input type="button" value="Cancel">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>

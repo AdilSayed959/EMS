@@ -1,0 +1,74 @@
+<style>
+    .main-div {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .mat-form-field {
+        padding: 10px;
+    }
+    
+    table {
+        width: 100%;
+    }
+    
+    .two-column-div {
+        column-count: 2;
+    }
+</style>
+
+<br>
+<br>
+<div>
+    <form [formGroup]="formService.loginform" class="normal-form">
+        <mat-card layout="row" class="main-div" layout-align="center center">
+            <mat-card-content>
+                <div>
+                    <input type="hidden" formControlName="$key">
+                    <div class="add-bottom-padding">
+                        <mat-form-field>
+                            <input formControlName="email" matInput placeholder="Email">
+                            <mat-error>Invalid email address.</mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="add-bottom-padding">
+                        <mat-form-field>
+                            <input formControlName="password" matInput placeholder="Password*">
+                            <mat-error *ngIf="formService.loginform.controls['password'].errors?.required">This field is mandatory.</mat-error>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="add-bottom-padding">
+                        <mat-radio-group formControlName="role">
+                            <mat-radio-button value="admin">Admin</mat-radio-button>
+                            <mat-radio-button value="user">User</mat-radio-button>
+                            <mat-radio-button value="employee">Employee</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                    <br><br>
+                    <div class="add-bottom-padding">
+                        <div class="button-row">
+                            <button mat-raised-button color="primary" (click)="onLogin()" [disabled]="formService.loginform.invalid">Submit</button>
+                            <button mat-raised-button color="warn" (click)="onClear()">Clear</button>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                </div>
+
+            </mat-card-content>
+        </mat-card>
+
+
+
+
+
+
+    </form>
+</div>

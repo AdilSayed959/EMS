@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new user</title>
+    <style>
+        .user
+        {
+            text-align: center;
+            font-size: 30px;
+
+        }
+
+        .userbox
+        {
+            position: relative;
+            height: 450px;
+            width:90%;
+            border:3px solid darkblue;
+            margin-left: 50px;
+        }
+
+        .userbox h2{
+            margin: 0;
+            background-color: darkblue;
+            color: white;
+            text-align: center;
+        }
+
+        .usercontainer{
+            height: 300px;
+            width: 400px;
+            position: absolute;
+            transform: translate(75%,0%);
+            top: 80px;
+            /* right:35%; */
+            border: 2px solid darkblue;
+        }
+
+        .usercontainer h4{
+            margin: 0;
+            background-color: darkblue;
+            color: white;
+            text-align: center;
+        }
+
+       .usercontainer input[type="button"]
+       {
+        border: 1px solid rgb(41, 224, 41);
+        margin: 10px;
+        height: 30px;
+        width: 70px;
+        border-radius: 3px;
+       }
+
+       .usercontainer label{
+           margin: 10px;
+       }
+
+       .usercontainer input[type="text"],input[type="password"]
+       {
+          border: 1px solid rgb(41, 224, 41);
+          padding: 5px;
+       }
+
+       .usercontainer select{
+           padding: 5px;
+        border: 1px solid rgb(41, 224, 41);
+        width: 100%
+       }
+    </style>
+</head>
+<body>
+    
+    <div class="user">
+        <h2>Create New User</h2>
+    </div>
+    <div class="userbox">
+        <h2>Employee Management System</h2>
+        <div class="usercontainer">
+            <h4>Create New User</h4>
+            <form action="">
+                <table>
+                <tr>
+                    <tr>
+                        <th><label for="user id">User Id:</label></th>
+                        <td> <input type="text" name="" id="" placeholder=""></td>
+                    </tr>
+                </tr>
+                <tr>
+                    <th><label for="password">Password:</label></th>
+                    <td><input type="password" name="" id=""></td>
+                </tr>
+                <tr>
+                    <th><label for="confirm password">Confirm Password:</label></th>
+                    <td><input type="password" name="" id=""></td>
+                </tr>
+                <tr>
+                    <th><label for="role">Role:</label></th>
+                        <td>
+                            <select>
+                                <option value="Select Role" selected>Select Role</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" value="Submit"></td>
+                </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Record Master</title>
+    <style>
+        .box {
+            height: 540px;
+            width: 500px;
+            border: 2px solid darkblue;
+            margin-left: 360px;
+        }
+
+        table {
+            font-size: 1rem;
+
+
+        }
+
+        .box h6 {
+            margin: 0;
+            border: 2px solid darkblue;
+            background-color: darkblue;
+            color: white;
+            text-align: center;
+            font-size: 15px;
+        }
+
+        .tbl3 span {
+            color: red;
+        }
+
+        .tbl3 input[type="text"],
+        input[type="date"],
+        input[type="email"] {
+            width: 145px;
+            border: 1px solid rgb(41, 224, 41);
+        }
+
+        .tbl3 input[type="date"]::-webkit-calendar-picker-indicator {
+            cursor: pointer;
+            border-radius: 4px;
+            margin-right: 2px;
+            opacity: 0.6;
+            filter: invert(0.1)
+        }
+
+        .tbl3 input[type="date"]::-webkit-calendar-picker-indicator:hover {
+            opacity: 1
+        }
+
+        .tbl3 input[type="file"] {
+            border: 1px solid rgb(41, 224, 41);
+        }
+
+        .tbl3 input[type="button"],input[type="reset"] {
+            border: 1px solid rgb(41, 224, 41);
+            height: 25px;
+            width: 60px;
+            border-radius: 2px;
+            justify-content: space-evenly;
+            margin:15px;
+        }
+
+
+        .tbl3 select {
+            border: 1px solid rgb(41, 224, 41);
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="box">
+        <h6>Employee Record Master</h6>
+        <form action="">
+            <table border="0" class="tbl3" align="center">
+                <tr>
+                    <td>Name <span>*</span></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Father Name</td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+
+                <tr>
+                    <td>Date Of Birth</td>
+                    <td><input type="date" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Date of Joinning <span>*</span></td>
+                    <td><input type="Date" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Designation <span>*</span></td>
+                    <td>
+                        <select>
+                            <option value="Select category" selected>Select Category</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Cummunication Address <span>*</span></td>
+                    <td><textarea name="text" cols="20" rows="5" style="border:1px solid rgb(41, 224, 41) ;"></textarea>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id="">Communication address and Permanent address are same</td>
+
+                    <!-- <td></td> -->
+
+                </tr>
+                <tr>
+                    <td>Permanent Address</td>
+                    <td><textarea name="text" cols="20" rows="5" style="border:1px solid rgb(41, 224, 41) ;"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Current Photo</td>
+                    <td><input type="file"></td>
+                </tr>
+                <tr>
+                    <td>Contact No</td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Email Id</td>
+                    <td><input type="email" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Salary <span>*</span></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>
+                        <span> * Compulsary Field</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="button" value="Submit">
+                        <input type="reset" value="reset">
+                    </td>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>
